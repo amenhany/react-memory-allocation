@@ -97,11 +97,11 @@ export default function SegmentTables() {
                   <div
                      key={i}
                      className={`${styles.logEntry} ${
-                        entry.startsWith('✓')
+                        entry.startsWith('+')
                            ? styles.logSuccess
-                           : entry.startsWith('✗')
+                           : entry.startsWith('x')
                              ? styles.logError
-                             : entry.startsWith('↩')
+                             : entry.startsWith('-')
                                ? styles.logWarn
                                : ''
                      }`}

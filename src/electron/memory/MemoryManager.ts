@@ -27,7 +27,7 @@ export class MemoryManager {
 
             if (holeIdx === -1) {
                 this.log.push(
-                    `${process.name} rejected - segment "${seg.name}" (${seg.size}K) ` +
+                    `x ${process.name} rejected - segment "${seg.name}" (${seg.size}K) ` +
                         `could not fit in any available hole`,
                 );
                 return false;
@@ -49,7 +49,7 @@ export class MemoryManager {
         this.holes = tempHoles;
         this.allocated.push(...assignments);
         this.log.push(
-            `Allocated ${process.name} [${algorithm}]: ` +
+            `+ Allocated ${process.name} [${algorithm}]: ` +
                 process.segments.map((s) => `${s.name}=${s.size}K`).join(', '),
         );
         return true;
@@ -83,7 +83,7 @@ export class MemoryManager {
 
         this.mergeHoles();
         this.log.push(
-            `Deallocated ${processName} - freed ${freed.length} segment(s), ` +
+            `- Deallocated ${processName} - freed ${freed.length} segment(s), ` +
                 `merged into ${this.holes.length} hole(s)`,
         );
         return true;
