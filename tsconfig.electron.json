@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "ignoreDeprecations": "6.0",
+        "baseUrl": ".",
+        "paths": {
+            "@/electron/*": ["src/electron/*"],
+            "@/types/*": ["src/types/*"],
+            "@/*": ["src/client/*"]
+        },
+        "strict": true,
+        "target": "esnext",
+        "module": "nodenext",
+        "noEmit": false,
+        "outDir": "dist-electron",
+        "rootDir": "src/electron",
+        "skipLibCheck": true,
+        "typeRoots": ["src/types/electron", "src/types/global"]
+    },
+    "include": ["src/electron", "src/types"]
+}

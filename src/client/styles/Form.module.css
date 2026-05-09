@@ -1,0 +1,295 @@
+.card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 8px 12px;
+  background: var(--bg-overlay);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.cardBody {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-family: var(--font-display);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.sectionLabel {
+  font-family: var(--font-display);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.input {
+  width: 100%;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 5px 8px;
+  border: 1px solid var(--border-default);
+  border-radius: 4px;
+  outline: none;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-glow);
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead th {
+  padding: 4px 8px;
+  font-family: var(--font-display);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-subtle);
+  text-align: left;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table tbody td {
+  padding: 4px 6px;
+  vertical-align: middle;
+}
+
+.indexCell {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 11px;
+  width: 28px;
+}
+
+.actionCell {
+  width: 32px;
+  text-align: center;
+}
+
+.btnDelete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition:
+    color 0.15s,
+    background 0.15s,
+    border-color 0.15s;
+}
+
+.btnDelete:hover:not(:disabled) {
+  color: var(--danger);
+  background: var(--danger-glow);
+  border-color: var(--danger);
+}
+
+.btnDelete:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.btnAdd {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--border-default);
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  cursor: pointer;
+  transition:
+    color 0.15s,
+    background 0.15s,
+    border-color 0.15s;
+}
+
+.btnAdd:hover {
+  color: var(--text-primary);
+  background: var(--bg-overlay);
+  border-color: var(--border-strong);
+}
+
+.btnAdd svg {
+  color: var(--accent);
+}
+
+.btnSubmit {
+  width: 100%;
+  padding: 7px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-dim);
+  background: var(--accent-glow);
+  color: var(--accent-bright);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+
+.btnSubmit:hover {
+  background: rgba(232, 160, 32, 0.25);
+  border-color: var(--accent);
+}
+
+.btnDanger {
+  width: 100%;
+  padding: 7px;
+  border-radius: 4px;
+  border: 1px solid var(--danger);
+  background: var(--danger-glow);
+  color: var(--danger);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btnDanger:hover:not(:disabled) {
+  background: rgba(232, 64, 64, 0.25);
+}
+
+.btnDanger:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.algRow {
+  display: flex;
+  gap: 6px;
+}
+
+.algBtn {
+  flex: 1;
+  padding: 5px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border-default);
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.algBtn:hover {
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+
+.algBtnActive {
+  border-color: var(--accent) !important;
+  background: var(--accent-glow) !important;
+  color: var(--accent-bright) !important;
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.select {
+  appearance: none;
+  width: 100%;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 5px 28px 5px 8px;
+  border: 1px solid var(--border-default);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.select:focus {
+  border-color: var(--accent);
+}
+
+.selectWrapper::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 4px solid var(--accent);
+}
+
+.select option {
+  background: var(--bg-elevated);
+}
+
+.error {
+  font-size: 11px;
+  color: var(--danger);
+  padding: 4px 6px;
+  background: var(--danger-glow);
+  border-radius: 3px;
+  border: 1px solid var(--danger);
+}

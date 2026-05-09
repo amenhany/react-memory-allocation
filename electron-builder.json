@@ -1,0 +1,17 @@
+{
+    "appId": "com.cse335.project",
+    "files": ["dist-electron", "dist-react"],
+    "extraResources": ["dist-electron/preload.cjs"],
+    "icon": "./desktopIcon.png",
+    "mac": {
+        "target": "dmg"
+    },
+    "linux": {
+        "target": "AppImage",
+        "category": "Utility"
+    },
+    "win": {
+        "target": ["portable", "msi"],
+        "icon": "./desktopIcon.png"
+    }
+}
